@@ -5,7 +5,7 @@ A while back I came accross a programming challenge - [The Cult of the Bound Var
 ## Java
 I first tried a java solution.  The problem with java is does not natively support unsigned 32 bit integers.  You can emulate an unsigned 32 bit integer using a java int, then apply bit masks when ever you do any operations on it, but this rapidly got messy and soon the code started to loose any sort of elegance.  It become ugly!  It could be done, but I couldn't find a way of keeping it simple.
 
-## C #
+## C sharp
 In the end I settled on C#.  I was working on a C# job at the time (2010), so it seemed a good oppertunity to see how beautiful the language really is.  You can use c# in semi dynamic way (you don't have to declare variable types), which made the solution far less verbose and importantly it supports unsigned integers.
 
 As a programmer, you get an instinct for when you are on the right track.  One thing that was true about my solution, was that as I refactored, it became simpler and simpler, till there was nothing more I could do.  I had obviously hit on a universal truth for the C# bound variable univeral machine!   Here is what I'm talking about:
