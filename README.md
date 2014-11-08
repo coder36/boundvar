@@ -1,11 +1,11 @@
 # The Cult of the Bound Variable
 
-A while back I came accross a programming challenge - (The Cult of the Bound Variable)[http://www.boundvariable.org/task.shtml]  The challenge was described as an (ancient specification written in sandstone for a universal machine)[http://www.boundvariable.org/um-spec.txt].  This really sparked my interest  - the task was to write an emulator!  The question to myself, was how many lines of code can it take to write an emulator ?
+A while back I came accross a programming challenge - [The Cult of the Bound Variable](http://www.boundvariable.org/task.shtml)  The challenge was described as an [ancient specification written in sandstone for a universal machine](http://www.boundvariable.org/um-spec.txt).  This really sparked my interest  - the task was to write an emulator!  The question to myself, was how many lines of code can it take to write an emulator ?
 
 ## Java
 I first tried a java solution.  The problem with java is does not natively support unsigned 32 bit integers.  You can emulate an unsigned 32 bit integer using a java int, then apply bit masks when ever you do any operations on it, but this rapidly got messy and soon the code started to loose any sort of elegance.  It become ugly!  It could be done, but I couldn't find a way of keeping it simple.
 
-## C#
+## C #
 In the end I settled on C#.  I was working on a C# job at the time (2010), so it seemed a good oppertunity to see how beautiful the language really is.  You can use c# in semi dynamic way (you don't have to declare variable types), which made the solution far less verbose and importantly it supports unsigned integers.
 
 As a programmer, you get an instinct for when you are on the right track.  One thing that was true about my solution, was that as I refactored, it became simpler and simpler, till there was nothing more I could do.  I had obviously hit on a universal truth for the C# bound variable univeral machine!   Here is what I'm talking about:
@@ -44,4 +44,4 @@ As a programmer, you get an instinct for when you are on the right track.  One t
 
 ## Conclusion
 
-In C# it took about 33 lines of code to define a virtual machine.  Of course you still need to load the virtual machines memory with a program, and you need all the various boiler plate stuff a C# project needs, but as a pure language, C# is elegent and pleasant to work with.
+In C# it took about 33 lines of code to define a virtual machine.  Of course you still need to load the virtual machines memory with a program, and you need all the various boiler plate stuff a C# project needs, but as a pure language, C# is elegent and pleasant to work with.  See [here](https://github.com/coder36/boundvar/blob/master/BoundVar/Program.cs) for the complete solution.
